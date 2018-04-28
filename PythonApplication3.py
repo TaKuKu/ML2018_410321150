@@ -11,7 +11,7 @@ Key1 = Image.open("key1.png")
 Key2 = Image.open("key2.png")
 
 
-height = E.size
+height = E.size[]
 
 print (height)
 
