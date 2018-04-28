@@ -20,7 +20,7 @@ while Epoch < MaxIterLimit or < 0.01:
         for x in width:
 
 
-
+#編輯中...
 
 E.close()
 Eprime.close()
