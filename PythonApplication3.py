@@ -12,8 +12,9 @@ Key2 = Image.open("key2.png")
 
 height = E.size[1]
 width = E.size[0]
-
-print (height)
+Epoch = 1
+w = np.random.random((1,3))
+print (w)
 
 E.close()
 Eprime.close()
