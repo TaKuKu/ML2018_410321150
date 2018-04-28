@@ -10,8 +10,8 @@ I = Image.open("I.png")
 Key1 = Image.open("key1.png")
 Key2 = Image.open("key2.png")
 
-
-height = E.size[0]
+height = E.size[1]
+width = E.size[0]
 
 print (height)
 
