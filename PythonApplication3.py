@@ -16,8 +16,8 @@ Epoch = 1
 w = np.random.random((1,3))
 
 while Epoch < MaxIterLimit:
-    for y in height:
-        for x in width:
+    for x in range(0, height):
+        for y in range(0, height):
             a = w[0] * Key1.getpixel((x, y)) + w[1] * Key2.getpixel((x, y)) + w[2] * I.getpixel((x, y))
             e = E.getpixel((x, y)) - a
             w[0] += 0.00001 * e * Key1[x][y]
