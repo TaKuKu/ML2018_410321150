@@ -8,7 +8,7 @@ Eprime = Image.open("C:\Documents\Visual Studio 2017\Projects\PythonApplication3
 I = Image.open("C:\Documents\Visual Studio 2017\Projects\PythonApplication3\PythonApplication3\I.png")
 Key1 = Image.open("C:\Documents\Visual Studio 2017\Projects\PythonApplication3\PythonApplication3\key1.png")
 Key2 = Image.open("C:\Documents\Visual Studio 2017\Projects\PythonApplication3\PythonApplication3\key2.png")
-MaxIterLimit = 5
+MaxIterLimit = 2
 
 height = E.size[1]
 width = E.size[0]
@@ -23,14 +23,22 @@ while Epoch < MaxIterLimit:
             w[0] += 0.00001 * e * Key1.getpixel((x, y))
             w[1] += 0.00001 * e * Key2.getpixel((x, y))
             w[2] += 0.00001 * e * I.getpixel((x, y))
-    Epoch += 1
+     Epoch = Epoch + 1
+
+
+output = (Eprime - (w[0] * Key1) - (w[1] * Key2)) / w[2]   
+
+plt.imshow(output, cmap = 'gray')
+
+plt.show()
+
     
-output = np.empty((400,300))
-for x in range(0, width):
-    for y in range(0, height):
-        output.putpixel((x, y), (Eprime.getpixel((x, y)) - w[0] * Key1.getpixel((x, y)) - w[1] * Key2.getpixel((x, y)))/w[2])
-img = Image.fromarray(output)
-print(img)
+#output = np.empty((400,300))
+##for x in range(0, width):
+    #for y in range(0, height):
+        #output.putpixel((x, y), (Eprime.getpixel((x, y)) - w[0] * Key1.getpixel((x, y)) - w[1] * Key2.getpixel((x, y)))/w[2])
+#img = Image.fromarray(output)
+#print(img)
 
 #編輯中...
 
