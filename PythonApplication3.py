@@ -23,6 +23,7 @@ while Epoch < MaxIterLimit:
             w[0] += 0.00001 * e * Key1[x][y]
             w[1] += 0.00001 * e * Key2[x][y]
             w[2] += 0.00001 * e * I[x][y]
+    Epoch += 1
 
 
 #編輯中...
