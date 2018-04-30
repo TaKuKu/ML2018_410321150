@@ -40,7 +40,6 @@ plt.show()
 #img = Image.fromarray(output)
 #print(img)
 
-#編輯中...
 
 E.close()
 Eprime.close()
