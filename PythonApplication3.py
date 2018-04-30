@@ -3,17 +3,17 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import random
 
-E = Image.open("E.png")
-Eprime = Image.open("Eprime.png")
-I = Image.open("I.png")
-Key1 = Image.open("key1.png")
-Key2 = Image.open("key2.png")
-MaxIterLimit = 100
+E = Image.open("C:\Documents\Visual Studio 2017\Projects\PythonApplication3\PythonApplication3\E.png")
+Eprime = Image.open("C:\Documents\Visual Studio 2017\Projects\PythonApplication3\PythonApplication3\Eprime.png")
+I = Image.open("C:\Documents\Visual Studio 2017\Projects\PythonApplication3\PythonApplication3\I.png")
+Key1 = Image.open("C:\Documents\Visual Studio 2017\Projects\PythonApplication3\PythonApplication3\key1.png")
+Key2 = Image.open("C:\Documents\Visual Studio 2017\Projects\PythonApplication3\PythonApplication3\key2.png")
+MaxIterLimit = 5
 
 height = E.size[1]
 width = E.size[0]
 Epoch = 1
-w = np.random.random((1,3))
+w = np.random.random(3)
 
 while Epoch < MaxIterLimit:
     for x in range(0, height):
