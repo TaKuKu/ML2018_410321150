@@ -25,10 +25,12 @@ while Epoch < MaxIterLimit:
             w[2] += 0.00001 * e * I.getpixel((x, y))
     Epoch += 1
     
+output = np.empty((400,300))
 for x in range(0, width):
     for y in range(0, height):
         output.putpixel((x, y), (Eprime.getpixel((x, y)) - w[0] * Key1.getpixel((x, y)) - w[1] * Key2.getpixel((x, y)))/w[2])
-print(output)
+img = Image.fromarray(output)
+print(img)
 
 #編輯中...
 
