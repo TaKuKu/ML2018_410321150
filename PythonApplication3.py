@@ -24,10 +24,10 @@ while Epoch < MaxIterLimit:
             w[1] += 0.00001 * e * Key2.getpixel((x, y))
             w[2] += 0.00001 * e * I.getpixel((x, y))
     Epoch += 1
-
-for x in height:
-    for y in width:
-        output.putpixel((i, j), (Eprime.getpixel((i, j)) - w[0] * Key1.getpixel((i, j)) - w[1] * Key2.getpixel((i, j)))/w[2])
+    
+for x in range(0, width):
+    for y in range(0, height):
+        output.putpixel((x, y), (Eprime.getpixel((x, y)) - w[0] * Key1.getpixel((x, y)) - w[1] * Key2.getpixel((x, y)))/w[2])
 print(output)
 
 #編輯中...
