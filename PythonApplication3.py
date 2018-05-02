@@ -29,7 +29,7 @@ while Epoch < MaxIterLimit:
      Epoch = Epoch + 1
 #按照演算法處理每筆學習資料
 
-
+print(w)
 output = (Eprime - (w[0] * Key1) - (w[1] * Key2)) / w[2]   
 #將得出的w用於解碼加密影像上
 
